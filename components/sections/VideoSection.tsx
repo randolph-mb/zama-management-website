@@ -19,7 +19,9 @@ export default function VideoSection() {
                         muted
                         loop
                         playsInline
+                        preload="auto"
                         className="absolute inset-0 w-full h-full object-cover"
+                        style={{ pointerEvents: 'none' }}
                     />
                     <div className="absolute inset-0 bg-gray-800/15"></div>
 

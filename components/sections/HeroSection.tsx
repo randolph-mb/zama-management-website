@@ -9,7 +9,9 @@ export default function HeroSection() {
                     muted
                     loop
                     playsInline
+                    preload="auto"
                     className="absolute inset-0 w-full h-full object-cover"
+                    style={{ pointerEvents: 'none' }}
                 />
                 {/* Gradient overlay: dark at bottom (for text), transparent at top (for hands/light) */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>

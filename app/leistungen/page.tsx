@@ -39,7 +39,7 @@ export default function LeistungenPage() {
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
-                  src="/assets/img/service_abrechnung.jpg"
+                  src="/assets/img/Leistungen/zama_business_d7f2e538d7.jpg"
                   alt="Person im weißen Kittel mit Mappe"
                   fill
                   className="object-cover"

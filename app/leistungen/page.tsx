@@ -68,7 +68,7 @@ export default function LeistungenPage() {
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
-                  src="/assets/img/service_hygiene.jpg"
+                  src="/assets/img/Leistungen/5_Zama_Leistungen_by_Christoph_Neumann_Kopie_a437518aa8.webp"
                   alt="Hände in Handschuhen formen ein Herz"
                   fill
                   className="object-cover"

@@ -1,41 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function LeistungenPage() {
-  const services = [
-    {
-      title: 'Externe Abrechnung',
-      subtitle: 'Das passende Modell für Deine Zahnarztpraxis',
-      description: 'Wir übernehmen die komplette Abrechnung für deine Praxis. Von der Rechnungsstellung bis zur Zahlungsüberwachung – alles aus einer Hand. So hast du mehr Zeit für deine Patienten.',
-      image: '/assets/img/service_abrechnung.jpg',
-      alt: 'Person im weißen Kittel mit Mappe'
-    },
-    {
-      title: 'Hygiene- und Praxismanagement',
-      subtitle: 'Wie die Zahnräder in einem Uhrwerk',
-      description: 'Effiziente Prozesse sind das Herzstück einer erfolgreichen Praxis. Wir optimieren dein Hygiene- und Praxismanagement für reibungslose Abläufe und höchste Qualität.',
-      image: '/assets/img/service_hygiene.jpg',
-      alt: 'Hände in Handschuhen formen ein Herz'
-    },
-    {
-      title: 'Team- und Führungskräftetraining',
-      subtitle: 'Gemeinsam stark',
-      description: 'Ein motiviertes Team ist der Schlüssel zum Erfolg. Unsere Trainings stärken die Zusammenarbeit, verbessern die Kommunikation und entwickeln Führungskompetenzen.',
-      image: '/assets/img/service_training.jpg',
-      alt: 'Hände halten ein Netzwerk aus Fäden'
-    },
-    {
-      title: 'Dein Neustart',
-      subtitle: 'Frischer Wind für deine Praxis',
-      description: 'Manchmal braucht es einen Neuanfang. Wir begleiten dich bei der Neuausrichtung deiner Praxis – von der Strategie bis zur Umsetzung.',
-      image: '/assets/img/service_neustart.jpg',
-      alt: 'Weiße Blume in Glasvase'
-    }
-  ];
-
   return (
-    <main className="pt-20">
+    <main className="pt-20 bg-[#ebe8e1]">
       {/* Hero Section with Video */}
       <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
         {/* Background Video */}
@@ -63,100 +31,157 @@ export default function LeistungenPage() {
       </section>
 
       {/* Services List */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="space-y-32">
-            {services.map((service, index) => (
-              <div key={index} className="grid md:grid-cols-2 gap-12 items-center">
-                {/* Image - Always Left */}
-                <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+          <div className="space-y-24">
 
-                {/* Content - Always Right */}
-                <div className="space-y-6">
-                  <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)]">
-                    {service.title}
-                  </h2>
-                  <h3 className="text-xl font-bold text-[var(--color-text)]">
-                    {service.subtitle}
-                  </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <Link
-                    href="/kontakt"
-                    className="inline-flex items-center text-[var(--color-accent)] font-semibold hover:underline"
-                  >
-                    Wann starten wir? →
-                  </Link>
-                </div>
+            {/* Service 1: Externe Abrechnung */}
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/assets/img/service_abrechnung.jpg"
+                  alt="Person im weißen Kittel mit Mappe"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            ))}
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
+                  Externe Abrechnung
+                </h2>
+                <h3 className="text-xl font-bold text-[var(--color-text)]">
+                  Das passende Modell für Deine Zahnarztpraxis
+                </h3>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Du suchst Unterstützung in der externen Abrechnung? Kein Problem. Wir unterstützen dich im Bereich der zahnärztlichen Abrechnung. Über Softwareanwender-Tipps zu Themen, Rabatt-Charts, ZE-Therapieplan sowie 2-Jahres-Ziel, lassen wir dich nie mit der Deine Praxis zu erstellen sondern, dein Programm auch nachhaltig aufzubauen. Wir begleiten dich bei Optimierungen der Abrechnungsabläufe und Deiner Zusammenarbeit weiter. Nach einem gemeinsamen Mentoring und einer Bedarfsanalyse schaffen wir dir das individuelle Abrechnungskonzept. Du findest das 4-Wochenplan und wir die Abrechnung.
+                </p>
+                <Link
+                  href="/kontakt"
+                  className="inline-flex items-center text-[#4a90e2] font-semibold hover:underline"
+                >
+                  Wann starten wir? →
+                </Link>
+              </div>
+            </div>
+
+            {/* Service 2: Hygiene- und Praxismanagement */}
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/assets/img/service_hygiene.jpg"
+                  alt="Hände in Handschuhen formen ein Herz"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
+                  Hygiene- und Praxismanagement
+                </h2>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Wie die Zahnräder in einem Uhrwerk sind Sauberkeit, Gefährdungsbeurteilung, Checklisten und Behandlungsabläufe nur ein Teil des Hygiene- und Praxismanagements. Wir nehmen dich an die Hand und gestalten das QM-Handbuch, umsetzbar und praxisnah. Bildung im QM kann Ordner auf dem Desktop sondern darf gelebt werden.
+                </p>
+                <Link
+                  href="/kontakt"
+                  className="inline-flex items-center text-[#4a90e2] font-semibold hover:underline"
+                >
+                  Wann starten wir? →
+                </Link>
+              </div>
+            </div>
+
+            {/* Service 3: Team- und Führungskräftetraining */}
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/assets/img/service_training.jpg"
+                  alt="Hände halten ein Netzwerk aus Fäden"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
+                  Team- und Führungskräfte-training
+                </h2>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Jede erfolgreiche Zahnarztpraxis braucht einen Mentor. In einer immer schwerer werdenden Welt heben wir den Fokus auf das wesentliche: Teamarbeit auf der Praxis. Wir heben die Führungsqualitäten auch aus dir. Teamentwicklung ist ein Schwerpunkt entwickelt, welches auch Führung auf das Gesamt-Blicken kann. Unser Führungskräfte-Coaching richtet sich an Führungskräfte für deine PM oder dich. Wir entwickeln den individuellen Fahrplan speziell auf Schritt-Praxiskonzept.
+                </p>
+                <Link
+                  href="/kontakt"
+                  className="inline-flex items-center text-[#4a90e2] font-semibold hover:underline"
+                >
+                  Wann starten wir? →
+                </Link>
+              </div>
+            </div>
+
+            {/* Service 4: Dein Neustart */}
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/assets/img/service_neustart.jpg"
+                  alt="Weiße Blume in Glasvase"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]">
+                  Dein Neustart
+                </h2>
+                <h3 className="text-xl font-bold text-[var(--color-text)]">
+                  Wir sind Deine Wegbegleiter zu Deiner Praxis
+                </h3>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Du wünschst dir gerade bei deinem beruflich wichtigen Schritt als Niederlassungsinhaber, alles an die Dinge zu denken? Kauf anstehen und keine Unterstützung? Wir begleiten dich bei der Umsetzung deiner Praxisideen. Unsere Praxisberater begleiten auf sich bei deinem Weg zur Neugründung, Praxisübernahme oder in deinem Veränderungsprozess (Relocation). Unsere Zusammenarbeit dauer mehr als Monate. In regelmäßigen Terminen besprechen wir Quelle Aufgaben und gehen gemeinsam die die Umsetzung seiner Themen.
+                </p>
+                <div className="space-y-2">
+                  <p className="text-base text-gray-700">
+                    <span className="text-[#4a90e2] font-semibold">Beratung & Unterstützung</span> bei der Integration, Nutzung & Optimierung deiner Praxissoftware
+                  </p>
+                  <p className="text-base text-gray-700">
+                    <span className="text-[#4a90e2] font-semibold">Ausarbeitung</span> deiner Therapiekonzepte
+                  </p>
+                  <p className="text-base text-gray-700">
+                    <span className="text-[#4a90e2] font-semibold">Anwendungsstrategien</span>
+                  </p>
+                  <p className="text-base text-gray-700">
+                    <span className="text-[#4a90e2] font-semibold">Personalkonzepte</span>
+                  </p>
+                  <p className="text-base text-gray-700">
+                    <span className="text-[#4a90e2] font-semibold">Start-up und Betriebs-Controlling</span>
+                  </p>
+                </div>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Im ersten Gespräch finden wir heraus, was du wirklich brauchst für deine individuelle Situation. Darauf aufbauend erstellen wir den Praxisfahrplan für unsere Zusammenarbeit, welches deinen Praxisalltag sicher mehr im Wege steht.
+                </p>
+                <Link
+                  href="/kontakt"
+                  className="inline-flex items-center text-[#4a90e2] font-semibold hover:underline"
+                >
+                  Wann starten wir? →
+                </Link>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="bg-[#f5f5f5]">
-        {/* Text & Contact Info */}
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Left: Text */}
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-6">
-                Der erste Eindruck zählt und der letzte bleibt.
-              </h2>
-              <p className="text-lg text-gray-700">
-                Wir freuen uns sehr auf ein gemeinsames Kennenlernen und darauf, deine Praxis auf dem Weg zum Erfolg zu begleiten.
-              </p>
-            </div>
-
-            {/* Right: Contact Details */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6 text-[var(--color-accent)]" />
-                <Link
-                  href="mailto:help@zama-management.de"
-                  className="text-lg hover:text-[var(--color-accent)] transition"
-                >
-                  help@zama-management.de
-                </Link>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-[var(--color-accent)]" />
-                <Link
-                  href="tel:0174-1729510"
-                  className="text-lg hover:text-[var(--color-accent)] transition"
-                >
-                  0174 - 172 9510
-                </Link>
-              </div>
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-[var(--color-accent)] mt-1" />
-                <div>
-                  <p className="text-lg">Zama Management GmbH & Co. KG</p>
-                  <p className="text-lg">Kochgasse 7</p>
-                  <p className="text-lg">06925 Annaburg, Germany</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Golden Phone Image */}
-        <div className="relative w-full h-[400px] md:h-[500px]">
-          <Image
-            src="/assets/img/golden_phone.jpg"
-            alt="Goldenes Wählscheiben-Telefon"
-            fill
-            className="object-cover"
-          />
+      {/* CTA Section */}
+      <section className="py-20 text-center">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-light italic text-[var(--color-text)] mb-8">
+            Denn Erfolg bedeutet für uns,<br />
+            andere erfolgreich zu machen.
+          </h2>
+          <Link
+            href="/kontakt"
+            className="inline-block px-8 py-3 rounded bg-[var(--color-text)] text-white hover:bg-[var(--color-accent)] transition font-semibold"
+          >
+            KONTAKT
+          </Link>
         </div>
       </section>
     </main>

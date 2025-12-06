@@ -36,20 +36,25 @@ export default function LeistungenPage() {
 
   return (
     <main className="pt-20">
-      {/* Hero Section */}
+      {/* Hero Section with Video */}
       <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
-        <Image
-          src="/assets/img/leistungen_hero.jpg"
-          alt="Zahnmedizinische Werkzeuge"
-          fill
-          className="object-cover"
-          priority
+        {/* Background Video */}
+        <video
+          src="/assets/videos/seminare_video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ pointerEvents: 'none' }}
         />
+
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Text Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6 z-10">
           <h1 className="text-white text-4xl md:text-6xl font-light italic leading-tight">
             Fokus entsteht,<br />
             wenn Prozesse halten.

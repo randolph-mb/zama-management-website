@@ -32,8 +32,8 @@ export const BREAKPOINTS = {
  */
 export const ASSETS = {
   IMAGES: {
-    LOGO: '/assets/img/logo_zama.png',
-    LOGO_FOOTER: '/assets/img/logo_zama_footer.png',
+    LOGO: '/assets/Zama/ZAM_Logo_agate_d60d129616.png',
+    LOGO_FOOTER: '/assets/Zama/ZAMA_Logo_ash_5d1188318c (1).png',
     BRIDGE_BUILDER: '/assets/img/Zama_Brueckenbauer_by_Christoph_Neumann_Kopie_be1bb1a863.webp',
   },
   VIDEOS: {

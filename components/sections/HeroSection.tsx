@@ -4,7 +4,7 @@ export default function HeroSection() {
             {/* Background Video with Overlay */}
             <div className="absolute inset-0">
                 <video
-                    src="/assets/videos/hero_video.mp4"
+                    src="/assets/Zama/Zama-Management Seminare. Jetzt informieren..mp4"
                     autoPlay
                     muted
                     loop

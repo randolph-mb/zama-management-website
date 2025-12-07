@@ -7,63 +7,81 @@ import { Container, Heading, Text } from '@/components/ui';
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleDotClick = (index: number) => {
+    if (index === activeIndex || isTransitioning) return;
+
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveIndex(index);
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 50);
+    }, 300);
+  };
 
   return (
     <section className="py-20 bg-[var(--foreground)]">
       <Container size="sm" className="text-center">
-        <div className="relative transition-all duration-500">
-          <div className="bg-[var(--foreground)] p-6 rounded-lg text-center transition-opacity duration-500">
-            <Heading
-              level="h3"
-              className="text-[var(--color-text-white)] text-xl md:text-2xl font-light italic mb-6"
-            >
-              &ldquo;{testimonials[activeIndex].quote}&rdquo;
-            </Heading>
-            <div className="mt-4 flex items-center justify-center gap-4">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                <Image
-                  src={testimonials[activeIndex].image}
-                  alt={testimonials[activeIndex].name}
-                  fill
-                  className="object-cover"
-                />
+        <div className="relative min-h-[400px] flex items-center justify-center">
+          <div
+            className={`w-full transition-all duration-500 ease-in-out ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+              }`}
+          >
+            <div className="bg-[var(--foreground)] p-6 rounded-lg text-center">
+              <Heading
+                level="h3"
+                className="text-[var(--color-text-white)] text-xl md:text-2xl font-light italic mb-8 leading-relaxed"
+              >
+                &ldquo;{testimonials[activeIndex].quote}&rdquo;
+              </Heading>
+              <div className="mt-6 flex items-center justify-center gap-4">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center p-1 transition-transform duration-300 hover:scale-110">
+                  <Image
+                    src={testimonials[activeIndex].image}
+                    alt={testimonials[activeIndex].name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="text-left">
+                  <Text
+                    size="base"
+                    weight="semibold"
+                    color="white"
+                    className="text-[var(--color-text-white)]"
+                  >
+                    {testimonials[activeIndex].name}
+                  </Text>
+                  <Text
+                    size="sm"
+                    weight="normal"
+                    color="white"
+                    className="text-[var(--color-text-white)] font-light"
+                  >
+                    {testimonials[activeIndex].company}
+                  </Text>
+                </div>
               </div>
-              <div>
-                <Text
-                  size="base"
-                  weight="semibold"
-                  color="white"
-                  className="text-[var(--color-text-white)]"
-                >
-                  {testimonials[activeIndex].name}
-                </Text>
-                <Text
-                  size="sm"
-                  weight="normal"
-                  color="white"
-                  className="text-[var(--color-text-white)] font-light"
-                >
-                  {testimonials[activeIndex].company}
-                </Text>
+
+              {/* Navigation Dots - positioned below name/company */}
+              <div className="mt-8 flex justify-center gap-3">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleDotClick(index)}
+                    disabled={isTransitioning}
+                    className={`h-3 w-3 rounded-full transition-all duration-300 ease-in-out ${index === activeIndex
+                        ? 'bg-[var(--background)] scale-125'
+                        : 'bg-[var(--background)]/30 hover:bg-[var(--background)]/50 hover:scale-110'
+                      } ${isTransitioning ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                    aria-label={`Testimonial ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Navigation Dots */}
-        <div className="mt-6 flex justify-center gap-3">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`h-3 w-3 rounded-full transition-all ${
-                index === activeIndex
-                  ? 'bg-[var(--background)] scale-125'
-                  : 'bg-[var(--background)]/30'
-              }`}
-              aria-label={`Testimonial ${index + 1}`}
-            />
-          ))}
         </div>
       </Container>
     </section>

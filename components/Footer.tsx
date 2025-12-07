@@ -1,25 +1,39 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { MapPin, Mail, Phone, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import { contactInfo, footerLinks, homepageContent, footerContent } from '@/data';
 import { ROUTES, ASSETS, COMPANY } from '@/lib/constants';
 import { Container, Heading, Button } from '@/components/ui';
 
 export default function Footer() {
+  const pathname = usePathname();
+  // Hide default CTA on Contact AND Seminars page (Seminars has its own custom CTA)
+  const showCTA = pathname !== ROUTES.CONTACT && pathname !== ROUTES.SEMINARS;
+
+  // Use beige background for Seminars page to match its theme
+  const isSeminarsPage = pathname === ROUTES.SEMINARS;
+  const footerBg = isSeminarsPage ? 'bg-[#f2f0e9]' : 'bg-[#ebe8e1]';
+  const borderColor = isSeminarsPage ? 'border-gray-300' : 'border-gray-300'; // Can adjust if needed
+
   return (
-    <footer className="bg-[#ebe8e1] text-[var(--color-text)]">
-      {/* CTA Section - Part of Footer */}
-      <div className="bg-[#ebe8e1] py-20 text-center">
-        <Container size="sm">
-          <Heading level="h2" className="text-[var(--color-text)] mb-8">
-            {homepageContent.cta.title} <br />
-            {homepageContent.cta.subtitle}
-          </Heading>
-          <Link href={ROUTES.CONTACT}>
-            <Button size="lg">{homepageContent.cta.buttonText}</Button>
-          </Link>
-        </Container>
-      </div>
+    <footer className={`${footerBg} text-[var(--color-text)]`}>
+      {/* CTA Section - Part of Footer, hidden on Contact & Seminars page */}
+      {showCTA && (
+        <div className={`${footerBg} py-20 text-center`}>
+          <Container size="sm">
+            <Heading level="h2" className="text-[var(--color-text)] mb-8">
+              {homepageContent.cta.title} <br />
+              {homepageContent.cta.subtitle}
+            </Heading>
+            <Link href={ROUTES.CONTACT}>
+              <Button size="lg">{homepageContent.cta.buttonText}</Button>
+            </Link>
+          </Container>
+        </div>
+      )}
 
       {/* Footer Content */}
       <Container size="lg" className="py-16">
@@ -130,7 +144,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-300 text-center text-sm">
+        <div className={`mt-12 pt-8 border-t ${borderColor} text-center text-sm`}>
           <p>{footerContent.copyright}</p>
         </div>
       </Container>

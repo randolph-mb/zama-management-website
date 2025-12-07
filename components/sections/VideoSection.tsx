@@ -14,7 +14,7 @@ export default function VideoSection() {
                 <div className="relative w-full aspect-[16/7] rounded-xl overflow-hidden shadow-xl">
                     {/* Background Video */}
                     <video
-                        src="/assets/videos/seminare_video.mp4"
+                        src="/assets/Zama/Zama-Management Seminare. Jetzt informieren._2.mp4"
                         autoPlay
                         muted
                         loop

@@ -1,78 +1,65 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { Container, Heading, Text } from '@/components/ui';
 
-export default function KontaktPage() {
+export default function ContactPage() {
   return (
-    <main>
-      {/* Contact Info Section */}
-      <section className="bg-[var(--background)]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 pb-30 pt-30 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="text-4xl lg:text-3xl font-bold text-[var(--color-text)] mb-8 pt-6 leading-tight">
-                Der erste Eindruck zählt
-                <br />
-                und der letzte bleibt.
-              </h2>
-              <p className="text-lg text-[var(--color-text)] mb-8 leading-relaxed">
-                Wir freuen uns sehr auf ein gemeinsames Kennenlernen, wie wir dich &amp; deinen
-                Praxiserfolg unterstützen können. Vereinbare doch gleich ein erstes unverbindliches
-                Kennenlernen mit Anja.
+    <main className="bg-[#f2f0e9] min-h-screen">
+      {/* Top Section: Text & Contact Details */}
+      <section className="text-black pt-32 pb-16 md:pt-40 md:pb-24">
+        <Container size="lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 items-center">
+            {/* Left Column: Text */}
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight">
+                Der erste Eindruck zählt<br className="hidden md:block" /> und der letzte bleibt.
+              </h1>
+              <p className="text-lg text-gray-700 leading-relaxed font-light max-w-xl">
+                Wir freuen uns sehr auf ein gemeinsames Kennenlernen, wie wir dich & deinen Praxiserfolg unterstützen können. Vereinbare doch gleich ein erstes unverbindliches Kennenlernen mit Anja.
               </p>
             </div>
 
-            <div className="space-y-8">
-              <div>
-                <div className="space-y-4 pt-30 pl-40">
-                  <div className="flex items-center space-x-3">
-                    <Mail className="text-[var(--color-primary)] w-5 h-5" />
-                    <a
-                      href="mailto:help@zama-management.de"
-                      className="text-[var(--color-text)] hover:text-[var(--color-primary)] transition"
-                    >
-                      help@zama-management.de
-                    </a>
-                  </div>
+            {/* Right Column: Contact Data */}
+            <div className="flex flex-col space-y-6 md:pl-12">
+              {/* Email */}
+              <div className="flex items-center gap-4">
+                <Mail className="w-5 h-5 text-black flex-shrink-0" />
+                <a href="mailto:help@zama-management.de" className="text-lg font-light hover:text-[#b0a080] transition-colors">
+                  help@zama-management.de
+                </a>
+              </div>
 
-                  <div className="flex items-center space-x-3">
-                    <Phone className="text-[var(--color-primary)] w-5 h-5" />
-                    <a
-                      href="tel:+491741729510"
-                      className="text-[var(--color-text)] hover:text-[var(--color-primary)] transition"
-                    >
-                      0174 - 172 9510
-                    </a>
-                  </div>
+              {/* Phone */}
+              <div className="flex items-center gap-4">
+                <Phone className="w-5 h-5 text-black flex-shrink-0" />
+                <a href="tel:01741729510" className="text-lg font-light hover:text-[#b0a080] transition-colors">
+                  0174 - 172 9510
+                </a>
+              </div>
 
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="text-[var(--color-primary)] w-5 h-5" />
-                    <div className="text-[var(--color-text)]">
-                      Zama Management GmbH &amp; Co. KG
-                      <br />
-                      Kochgasse 7, <br />
-                      06925 Annaburg, Germany
-                    </div>
-                  </div>
-                </div>
+              {/* Address */}
+              <div className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 text-black flex-shrink-0 mt-1" />
+                <Text size="lg" className="leading-snug font-light">
+                  Zama Management GmbH & Co. KG<br />
+                  Kochgasse 7,<br />
+                  06925 Annaburg, Germany
+                </Text>
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* Image Section */}
-      <section className="bg-gray-50">
-        <div className="w-full">
-          <div className="relative h-[100vh] w-full overflow-hidden">
-            <Image
-              src="/assets/img/zama_kontakt.png"
-              alt="Zama Consulting Team"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </div>
+      {/* Middle Section: Full-Width Image */}
+      <section className="w-full relative h-[500px] md:h-[600px] bg-black">
+        <Image
+          src="/assets/Kontakt/1_Zama_Kontakt_by_Christoph_Neumann_e4825bb5fc.png"
+          alt="Zama Kontakt Telefon"
+          fill
+          className="object-cover"
+          priority
+        />
       </section>
     </main>
   );

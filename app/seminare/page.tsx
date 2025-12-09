@@ -101,11 +101,13 @@ export default function SeminarsPage() {
                   <div className="relative w-[280px] h-[400px] md:w-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl mx-auto">
                     <video
                       className="absolute inset-0 w-full h-full object-cover"
-                      src="/assets/seminare/Zama-Management Seminare. Jetzt informieren..mp4"
+                      src="/assets/seminare/Zama-Management Seminare. Jetzt informieren._2.mp4"
+                      poster="/assets/Zama/dentist_hand_cneumann_b25e1216ac (1).jpg"
                       autoPlay
                       muted
                       loop
                       playsInline
+                      preload="metadata"
                     />
                   </div>
                 </div>
@@ -133,10 +135,12 @@ export default function SeminarsPage() {
             <video
               className="absolute inset-0 w-full h-full object-cover"
               src="/assets/seminare/Zama-Management Seminare. Jetzt informieren._2.mp4"
+              poster="/assets/Zama/dentist_hand_cneumann_b25e1216ac (1).jpg"
               autoPlay
               muted
               loop
               playsInline
+              preload="metadata"
             />
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/40" />
@@ -172,10 +176,12 @@ export default function SeminarsPage() {
                 <video
                   className="absolute inset-0 w-full h-full object-cover"
                   src="/assets/seminare/Zama-Management Seminare. Jetzt informieren._3.mp4"
+                  poster="/assets/Zama/dentist_hand_cneumann_b25e1216ac (1).jpg"
                   autoPlay
                   muted
                   loop
                   playsInline
+                  preload="metadata"
                 />
                 {/* Overlay Gradient for Text Readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -299,6 +305,8 @@ export default function SeminarsPage() {
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                  quality={85}
                 />
               </div>
             </div>

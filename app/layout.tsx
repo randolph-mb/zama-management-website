@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ClientLayout from '@/components/ClientLayout';
 
 export const metadata: Metadata = {
   title: 'Zama-Management Seminare. Jetzt informieren.',
@@ -29,9 +30,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16" />
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <ClientLayout>
+          <Header />
+          {children}
+          <Footer />
+        </ClientLayout>
       </body>
     </html>
   );

@@ -107,7 +107,7 @@ export default function SeminarsPage() {
                       muted
                       loop
                       playsInline
-                      preload="metadata"
+                      preload="auto"
                     />
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export default function SeminarsPage() {
               muted
               loop
               playsInline
-              preload="metadata"
+              preload="auto"
             />
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/40" />
@@ -181,7 +181,7 @@ export default function SeminarsPage() {
                   muted
                   loop
                   playsInline
-                  preload="metadata"
+                  preload="auto"
                 />
                 {/* Overlay Gradient for Text Readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

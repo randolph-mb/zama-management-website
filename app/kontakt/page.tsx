@@ -21,18 +21,18 @@ export default function ContactPage() {
 
             {/* Right Column: Contact Data */}
             <div className="flex flex-col space-y-6 md:pl-12">
-              {/* Email (min 44px touch target) */}
+              {/* Email */}
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-black flex-shrink-0" />
-                <a href="mailto:help@zama-management.de" className="text-lg font-light hover:text-[#b0a080] transition-colors min-h-[44px] flex items-center">
+                <a href="mailto:help@zama-management.de" className="text-lg font-light hover:text-[#b0a080] transition-colors">
                   help@zama-management.de
                 </a>
               </div>
 
-              {/* Phone (min 44px touch target) */}
+              {/* Phone */}
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-black flex-shrink-0" />
-                <a href="tel:01741729510" className="text-lg font-light hover:text-[#b0a080] transition-colors min-h-[44px] flex items-center">
+                <a href="tel:01741729510" className="text-lg font-light hover:text-[#b0a080] transition-colors">
                   0174 - 172 9510
                 </a>
               </div>
@@ -59,8 +59,6 @@ export default function ContactPage() {
           fill
           className="object-cover"
           priority
-          sizes="100vw"
-          quality={85}
         />
       </section>
     </main>

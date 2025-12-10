@@ -50,8 +50,6 @@ export default function ServicesPage() {
           fill
           className="object-cover"
           priority
-          sizes="100vw"
-          quality={85}
         />
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center text-center p-4">
           <Heading level="h1" className="text-white text-4xl md:text-6xl lg:text-7xl font-bold italic leading-tight drop-shadow-lg">
@@ -73,8 +71,6 @@ export default function ServicesPage() {
                     alt={service.alt}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                    quality={85}
                   />
                 </div>
 

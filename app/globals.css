@@ -32,6 +32,15 @@ body {
 body {
   color: var(--color-text);
   background: var(--background);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Überschriften verwenden Oswald */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 a {

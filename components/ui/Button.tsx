@@ -22,9 +22,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps & ButtonHTMLAttributes<
     },
     ref
   ) => {
-    // Base styles
+    // Base styles - Oswald Medium (500) + UPPERCASE
     const baseStyles =
-      'inline-flex items-center justify-center font-semibold rounded transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
+      'inline-flex items-center justify-center font-oswald font-medium uppercase rounded transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed tracking-wide';
 
     // Variant styles
     const variantStyles = {

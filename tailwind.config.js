@@ -26,10 +26,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        // Oswald: für Überschriften, Menüs, Buttons (bold, strukturell)
-        oswald: ['Oswald', 'sans-serif'],
-        // Open Sans: für Fließtext, Beschreibungen, Zitate (lesbar)
-        sans: ['Open Sans', 'sans-serif'],
+        // Satoshi: für alles
+        oswald: ['Satoshi', 'sans-serif'],
+        sans: ['Satoshi', 'sans-serif'],
       },
       maxWidth: {
         container: '1280px',

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
 :root {
   --foreground: #1a1a1a;
   --background: #ffffff;
@@ -32,13 +40,19 @@ body {
 body {
   color: var(--color-text);
   background: var(--background);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
   line-height: 1.6;
 }
 
-/* Überschriften verwenden Oswald */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif;
+/* Überschriften verwenden Satoshi Bold */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Satoshi', sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }

@@ -100,15 +100,20 @@ export default function TeamPage() {
 
                   {/* Text Content */}
                   <div className="flex flex-col justify-center space-y-4 md:space-y-6 md:w-1/2">
-                    <p className="text-xs md:text-sm font-semibold tracking-widest text-gray-500 uppercase">
+                    <p className="text-xs md:text-sm font-semibold tracking-widest text-gray-500 uppercase font-oswald">
                       {member.label}
                     </p>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-text)]">
                       {member.name}
                     </h2>
-                    <p className="text-base md:text-lg leading-relaxed text-gray-700">
-                      {member.description}
-                    </p>
+                    {/* Split description into paragraphs and render with spacing */}
+                    <div className="space-y-5 md:space-y-6 mt-2">
+                      {member.description.split('\n\n').map((paragraph, pIndex) => (
+                        <p key={pIndex} className="text-base md:text-lg leading-[1.75] text-[#2a2a2a]">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               );

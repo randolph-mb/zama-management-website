@@ -26,8 +26,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        'satoshi-regular': ['var(--font-satoshi)', 'sans-serif'],
-        satoshi: ['var(--font-satoshi)', 'sans-serif'],
+        // Oswald: für Überschriften, Menüs, Buttons (bold, strukturell)
+        oswald: ['Oswald', 'sans-serif'],
+        // Open Sans: für Fließtext, Beschreibungen, Zitate (lesbar)
+        sans: ['Open Sans', 'sans-serif'],
       },
       maxWidth: {
         container: '1280px',

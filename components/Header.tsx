@@ -78,13 +78,13 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation Menu */}
+          {/* Desktop Navigation Menu - Oswald Medium + UPPERCASE */}
           <nav className="hidden lg:flex flex-1 justify-center pl-[55px] space-x-8">
             {mainMenuItems.map((item) => (
               <Link
                 key={item.url}
                 href={item.url}
-                className={`text-[var(--color-text-white)] hover:text-[var(--color-accent)] transition font-medium ${item.active ? 'text-[var(--color-accent)]' : ''
+                className={`text-[var(--color-text-white)] hover:text-[var(--color-accent)] transition font-oswald font-medium uppercase tracking-wide ${item.active ? 'text-[var(--color-accent)]' : ''
                   }`}
               >
                 {item.label}
@@ -121,7 +121,7 @@ export default function Header() {
             <Link
               key={item.url}
               href={item.url}
-              className={`text-[var(--color-text-white)] hover:text-[var(--color-accent)] transition text-2xl font-medium ${item.active ? 'text-[var(--color-accent)]' : ''
+              className={`text-[var(--color-text-white)] hover:text-[var(--color-accent)] transition text-2xl font-oswald font-medium uppercase tracking-wide ${item.active ? 'text-[var(--color-accent)]' : ''
                 }`}
             >
               {item.label}

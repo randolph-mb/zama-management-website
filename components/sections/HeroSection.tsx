@@ -18,10 +18,10 @@ export default function HeroSection() {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 h-full flex flex-col items-center justify-end text-center px-6 pb-16 md:pb-24">
-                <h1 className="text-[var(--color-text-white)] mb-20 italic font-light" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: '1.3' }}>
-                    Denn Erfolg bedeutet für uns, andere<br />
-                    erfolgreich zu machen.
+            <div className="relative z-20 h-full flex flex-col items-center justify-end text-center px-4 sm:px-6 pb-20 sm:pb-24 md:pb-28">
+                <h1 className="text-[var(--color-text-white)] mb-12 sm:mb-16 md:mb-20 italic font-light max-w-4xl" style={{ fontSize: 'clamp(1.75rem, 5vw, 3.5rem)', lineHeight: '1.3' }}>
+                    Denn Erfolg bedeutet für uns, andere<br className="hidden sm:block" />
+                    <span className="sm:hidden"> </span>erfolgreich zu machen.
                 </h1>
             </div>
         </section>

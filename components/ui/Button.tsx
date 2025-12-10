@@ -34,11 +34,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps & ButtonHTMLAttributes<
       ghost: `text-[var(--color-text)] hover:bg-gray-light`,
     };
 
-    // Size styles
+    // Size styles - optimized for mobile touch targets (min 44px)
     const sizeStyles = {
-      sm: 'px-4 py-2 text-sm',
-      md: 'px-5 py-2',
-      lg: 'px-8 py-3 text-lg',
+      sm: 'px-4 py-2.5 text-sm min-h-[44px]',
+      md: 'px-6 py-3 min-h-[44px]',
+      lg: 'px-8 py-4 text-lg min-h-[48px]',
     };
 
     const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;

@@ -99,16 +99,20 @@ export default function TeamPage() {
                   </div>
 
                   {/* Text Content */}
-                  <div className="flex flex-col justify-center space-y-4 md:space-y-6 md:w-1/2">
-                    <p className="text-xs md:text-sm font-semibold tracking-widest text-gray-500 uppercase">
+                  <div className="flex flex-col justify-center md:w-1/2">
+                    <p className="text-xs md:text-sm font-semibold tracking-widest text-gray-500 uppercase mb-2 md:mb-4">
                       {member.label}
                     </p>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-text)]">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-text)] mb-6 md:mb-8">
                       {member.name}
                     </h2>
-                    <p className="text-base md:text-lg leading-relaxed text-gray-700">
-                      {member.description}
-                    </p>
+                    <div className="text-base md:text-lg leading-relaxed text-gray-800 space-y-4">
+                      {member.description.split('\n\n').map((paragraph, i) => (
+                        <p key={i}>
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               );

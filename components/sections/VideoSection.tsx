@@ -9,9 +9,9 @@ export default function VideoSection() {
     ];
 
     return (
-        <section className="py-24" style={{ background: 'linear-gradient(180deg, var(--background) 0% 40%, var(--foreground) 40% 100%)' }}>
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="relative w-full aspect-[16/7] rounded-xl overflow-hidden shadow-xl">
+        <section className="py-12 sm:py-16 md:py-24" style={{ background: 'linear-gradient(180deg, var(--background) 0% 40%, var(--foreground) 40% 100%)' }}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                <div className="relative w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[16/7] rounded-lg md:rounded-xl overflow-hidden shadow-xl">
                     {/* Background Video */}
                     <video
                         src="/assets/Zama/Zama-Management Seminare. Jetzt informieren._2.mp4"
@@ -26,17 +26,17 @@ export default function VideoSection() {
                     <div className="absolute inset-0 bg-gray-800/15"></div>
 
                     {/* Content Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center md:justify-start p-2 md:p-8">
-                        <div className="rounded-lg p-2 md:p-6 max-w-lg text-center md:text-left">
-                            <h2 className="text-[var(--color-text-white)] mb-4 font-bold" style={{ fontSize: 'clamp(2rem, 4.8vw, 2.4rem)' }}>
+                    <div className="absolute inset-0 flex items-center justify-center md:justify-start p-4 sm:p-6 md:p-8">
+                        <div className="rounded-lg p-3 sm:p-4 md:p-6 max-w-lg text-center md:text-left">
+                            <h2 className="text-[var(--color-text-white)] mb-3 sm:mb-4 font-bold" style={{ fontSize: 'clamp(1.5rem, 4.8vw, 2.4rem)' }}>
                                 Mehr als Beratung – Dein Praxisbegleiter
                             </h2>
-                            <p className="text-[var(--color-text-white)] mb-3">
+                            <p className="text-[var(--color-text-white)] mb-3 sm:mb-4 text-sm sm:text-base">
                                 Erfahre mehr über unser Leistungsangebot:
                             </p>
 
                             {/* Desktop: List with arrows */}
-                            <ul className="space-y-4 text-[var(--color-text-white)] list-none pl-0 hidden md:block">
+                            <ul className="space-y-3 sm:space-y-4 text-[var(--color-text-white)] list-none pl-0 hidden md:block">
                                 {services.map((service, index) => (
                                     <li key={index} className="leading-relaxed flex items-center">
                                         <Link href={service.href} className="font-bold hover:text-[var(--color-accent)] transition">
@@ -48,10 +48,10 @@ export default function VideoSection() {
                             </ul>
 
                             {/* Mobile: Button */}
-                            <div className="md:hidden flex justify-center">
+                            <div className="md:hidden flex justify-center mt-2">
                                 <Link
                                     href="/leistungen"
-                                    className="bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                                    className="bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white px-6 py-3 rounded-lg font-semibold transition-colors min-h-[44px] inline-flex items-center justify-center"
                                 >
                                     Leistungen
                                 </Link>

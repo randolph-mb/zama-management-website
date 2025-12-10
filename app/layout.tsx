@@ -25,7 +25,9 @@ export default function RootLayout({
     <html lang="de">
       <head>
         <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         <meta httpEquiv="Content-Language" content="de" />
+        <meta name="format-detection" content="telephone=no" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16" />
       </head>
       <body>

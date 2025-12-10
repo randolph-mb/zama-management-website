@@ -22,9 +22,9 @@ export default function Footer() {
     <footer className={`${footerBg} text-[var(--color-text)]`}>
       {/* CTA Section - Part of Footer, hidden on Contact & Seminars page */}
       {showCTA && (
-        <div className={`${footerBg} py-20 text-center`}>
-          <Container size="sm">
-            <Heading level="h2" className="text-[var(--color-text)] mb-8">
+        <div className={`${footerBg} py-12 sm:py-16 md:py-20 text-center`}>
+          <Container size="sm" className="px-4 sm:px-6">
+            <Heading level="h2" className="text-[var(--color-text)] mb-6 sm:mb-8 text-2xl sm:text-3xl md:text-4xl">
               {homepageContent.cta.title} <br />
               {homepageContent.cta.subtitle}
             </Heading>
@@ -36,8 +36,8 @@ export default function Footer() {
       )}
 
       {/* Footer Content */}
-      <Container size="lg" className="py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <Container size="lg" className="py-12 sm:py-14 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
           {/* Company Info */}
           <div>
             <Image
@@ -45,7 +45,7 @@ export default function Footer() {
               alt={COMPANY.NAME}
               width={120}
               height={60}
-              className="h-12 w-auto mb-6"
+              className="h-10 sm:h-12 w-auto mb-4 sm:mb-6"
             />
             <div className="text-sm flex items-start">
               <MapPin className="mr-2 flex-shrink-0 w-4 h-4 mt-1" />
@@ -62,10 +62,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider">
+            <h4 className="text-sm font-bold mb-3 sm:mb-4 uppercase tracking-wider">
               {footerContent.contactTitle}
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2.5 sm:space-y-3 text-sm">
               <li className="flex items-center">
                 <Mail className="mr-2 w-4 h-4 flex-shrink-0" />
                 <Link
@@ -128,10 +128,10 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-sm font-bold mb-4 uppercase tracking-wider">
+            <h4 className="text-sm font-bold mb-3 sm:mb-4 uppercase tracking-wider">
               {footerContent.legalTitle}
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2.5 sm:space-y-3 text-sm">
               {footerLinks[0].links.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-[var(--color-accent)] transition">
@@ -144,7 +144,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className={`mt-12 pt-8 border-t ${borderColor} text-center text-sm`}>
+        <div className={`mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-7 md:pt-8 border-t ${borderColor} text-center text-xs sm:text-sm`}>
           <p>{footerContent.copyright}</p>
         </div>
       </Container>

@@ -17,6 +17,12 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -31,4 +37,26 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve touch interactions on mobile */
+button,
+a,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Optimize video playback on mobile */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent text size adjustment on mobile */
+@supports (-webkit-touch-callout: none) {
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
 }

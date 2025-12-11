@@ -1,10 +1,12 @@
+import { ASSETS } from '@/lib/constants';
+
 export default function HeroSection() {
     return (
         <section className="relative w-full h-screen overflow-hidden">
             {/* Background Video with Overlay */}
             <div className="absolute inset-0">
                 <video
-                    src="/assets/Zama/Zama-Management Seminare. Jetzt informieren..mp4"
+                    src={ASSETS.VIDEOS.HERO}
                     autoPlay
                     muted
                     loop

@@ -29,16 +29,27 @@ export const BREAKPOINTS = {
 
 /**
  * Asset paths
+ * Central source of truth for all static assets
  */
 export const ASSETS = {
   IMAGES: {
+    // Brand
     LOGO: '/assets/Zama/ZAM_Logo_agate_d60d129616.png',
     LOGO_FOOTER: '/assets/Zama/ZAMA_Logo_ash_5d1188318c (1).png',
-    BRIDGE_BUILDER: '/assets/img/Zama_Brueckenbauer_by_Christoph_Neumann_Kopie_be1bb1a863.webp',
+
+    // Icons
+    TOOTH_GREEN: '/assets/Zama/Zama_Teeth_Icon_Green_1_b9adb4c354.png',
+    TOOTH_LAVENDER: '/assets/Zama/Zama_Teeth_Icon_Lavender_1_6ac2558c4a.png',
+    TOOTH_YELLOW: '/assets/Zama/Zama_Teeth_Icon_Yellow_1_b2243dad9a.png',
+
+    // Feature Images
+    BRIDGE_BUILDER: '/assets/Zama/Zama_Brueckenbauer_by_Christoph_Neumann_Kopie_be1bb1a863.webp',
+    CONTACT_HERO: '/assets/Kontakt/1_Zama_Kontakt_by_Christoph_Neumann_e4825bb5fc.png',
   },
   VIDEOS: {
-    HERO: '/assets/videos/hero_video.mp4',
-    SEMINARS: '/assets/videos/seminare_video.mp4',
+    // Note: Filenames copied exactly from filesystem (including spaces and double dots if any)
+    HERO: '/assets/Zama/Zama-Management Seminare. Jetzt informieren..mp4',
+    SEMINARS_TEASER: '/assets/Zama/Zama-Management Seminare. Jetzt informieren._2.mp4',
   },
 } as const;
 

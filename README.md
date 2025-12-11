@@ -157,7 +157,29 @@ const menuItems = [
 ### Footer anpassen:
 Bearbeiten Sie `/components/Footer.tsx`
 
-## 📱 Responsive Design
+## 📝 Inhalte bearbeiten (Seminare)
+
+Die Inhalte der Seminar-Seite können ohne Programmierkenntnisse geändert werden. Alle Texte und Einstellungen befinden sich in einer zentralen Datei:
+
+**Datei:** `/data/seminars.ts`
+
+### 1. Banner-Event ändern (z.B. Netzwerktreffen)
+Suche nach `export const currentEvent`. Hier kannst du anpassen:
+- `badge`: Der kleine Text über der Überschrift (z.B. "Demnächst!")
+- `title`: Die große Überschrift
+- `dateLocation`: Datum und Ort
+- `video`: Pfad zum Hintergrundvideo
+
+### 2. Seminare bearbeiten
+Suche nach `export const seminars`. Jedes Seminar ist ein Block `{ ... }`:
+- `shortDescription`: Kurzer Text für die Übersichtskarte.
+- `fullDescription`: Langer Text für die Detail-Seite.
+- `details`:
+  - `duration`: Dauer (z.B. "1 Tag")
+  - `price`: Preisinfo
+  - `format`: Format (z.B. "Präsenz-Seminar")
+
+**Wichtig:** Nach dem Speichern der Datei werden die Änderungen automatisch übernommen.
 
 Die Anwendung ist vollständig responsive:
 - **Mobile**: Optimiert für Smartphones

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Container, Heading, Text } from '@/components/ui';
+import { ASSETS } from '@/lib/constants';
 
 export default function ContactPage() {
   return (
@@ -54,7 +55,7 @@ export default function ContactPage() {
       {/* Middle Section: Full-Width Image */}
       <section className="w-full relative h-[500px] md:h-[600px] bg-black">
         <Image
-          src="/assets/Kontakt/1_Zama_Kontakt_by_Christoph_Neumann_e4825bb5fc.png"
+          src={ASSETS.IMAGES.CONTACT_HERO}
           alt="Zama Kontakt Telefon"
           fill
           className="object-cover"

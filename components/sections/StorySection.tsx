@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ASSETS } from '@/lib/constants';
 
 export default function StorySection() {
     return (
@@ -7,7 +8,7 @@ export default function StorySection() {
                 {/* Image */}
                 <div className="w-full h-auto relative aspect-[3/4] rounded-lg overflow-hidden">
                     <Image
-                        src="/assets/Zama/Zama_Brueckenbauer_by_Christoph_Neumann_Kopie_be1bb1a863.webp"
+                        src={ASSETS.IMAGES.BRIDGE_BUILDER}
                         alt="Brückenbauer"
                         fill
                         className="object-cover"

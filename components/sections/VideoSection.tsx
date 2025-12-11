@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { ASSETS } from '@/lib/constants';
 
 export default function VideoSection() {
     const services = [
@@ -14,7 +15,7 @@ export default function VideoSection() {
                 <div className="relative w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[16/7] rounded-lg md:rounded-xl overflow-hidden shadow-xl">
                     {/* Background Video */}
                     <video
-                        src="/assets/Zama/Zama-Management Seminare. Jetzt informieren._2.mp4"
+                        src={ASSETS.VIDEOS.SEMINARS_TEASER}
                         autoPlay
                         muted
                         loop

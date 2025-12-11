@@ -129,12 +129,7 @@ export default function DatenschutzPage() {
                 Wenn Sie uns kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten zum Zwecke der Bearbeitung bei uns gespeichert.
               </p>
 
-              <h3 className="text-xl font-semibold mb-2">Terminvereinbarung mit Calendly</h3>
-              <p className="mb-4">
-                Wir nutzen Calendly für die Terminbuchung. Anbieter ist die Calendly LLC, Atlanta, Georgia, USA. Wenn Sie einen Termin buchen, werden die eingegebenen Daten an Calendly übertragen.
-                <br />
-                Weitere Informationen entnehmen Sie der Datenschutzerklärung von Calendly: <a href="https://calendly.com/pages/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-opacity-80">https://calendly.com/pages/privacy</a>.
-              </p>
+
             </div>
 
             {/* Plugins und Tools */}

@@ -45,12 +45,15 @@ export default function Header() {
   const isSeminarsPage = pathname === ROUTES.SEMINARS;
   const isContactPage = pathname === ROUTES.CONTACT;
 
+  const isImprintPage = pathname === ROUTES.IMPRINT;
+  const isPrivacyPage = pathname === ROUTES.PRIVACY;
+
   // Header background logic
   let headerBgClass = 'bg-transparent';
 
   if (isScrolled) {
     headerBgClass = 'bg-[#1a1a1a]';
-  } else if (isSeminarsPage) {
+  } else if (isSeminarsPage || isImprintPage || isPrivacyPage) {
     headerBgClass = 'bg-[#1a1a1a]';
   } else if (isContactPage) {
     headerBgClass = 'bg-[#333333]'; // Matches screenshot (Dark Gray)

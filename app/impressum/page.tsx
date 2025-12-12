@@ -56,13 +56,7 @@ export default function ImpressumPage() {
               </p>
             </div>
 
-            {/* Webdesign und Umsetzung */}
-            <div>
-              <h2 className="text-2xl font-semibold mb-4">Webdesign und Umsetzung</h2>
-              <p>
-                Design und Umsetzung: Julia Werneth
-              </p>
-            </div>
+
 
             {/* Fotos */}
             <div>

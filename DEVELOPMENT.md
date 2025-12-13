@@ -295,35 +295,20 @@ out/
 └── assets/
 ```
 
-### Deployment-Optionen
+### Deployment
 
-#### 1. Vercel (Zero-Config)
+#### Vercel (einzige unterstützte Plattform)
 ```bash
 npm i -g vercel
 vercel login
 vercel
 ```
 
-#### 2. Netlify
-```bash
-npm run build
-# Drag & Drop /out Ordner in Netlify Dashboard
-```
-
-#### 3. GitHub Pages
-```bash
-# In next.config.js:
-basePath: '/repo-name'
-
-npm run build
-# /out Ordner in gh-pages Branch pushen
-```
-
-#### 4. Eigener Server
-```bash
-# /out Ordner auf Server kopieren
-scp -r out/* user@server:/var/www/html/
-```
+**Warum nur Vercel?**
+- Automatische Image Optimization (AVIF/WebP)
+- Edge Network mit globalem Caching
+- Keine Cold Starts
+- Serverless Functions für dynamische Features
 
 ## 🐛 Troubleshooting
 

@@ -113,17 +113,13 @@ npm run dev -- -p 3001  # Anderen Port nutzen
 
 ## 🌐 Deployment
 
-**Vercel (empfohlen):**
+**Vercel (einzige unterstützte Plattform):**
 ```bash
 npm i -g vercel
 vercel
 ```
 
-**Netlify:**
-Drag & Drop des `/out` Ordners nach `npm run build`
-
-**Eigener Server:**
-Kopiere `/out` Ordner auf deinen Webserver
+**Wichtig:** Die Website nutzt Vercel Image Optimization und muss auf Vercel deployed werden.
 
 ---
 

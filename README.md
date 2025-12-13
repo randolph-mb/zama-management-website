@@ -188,18 +188,16 @@ Die Anwendung ist vollständig responsive:
 
 ## 🌐 Deployment
 
-### Vercel (empfohlen):
+### Vercel (einzige unterstützte Plattform):
 ```bash
 vercel deploy
 ```
 
-### Netlify:
-```bash
-netlify deploy --prod --dir=out
-```
-
-### Eigener Server:
-Kopieren Sie den Inhalt des `/out` Verzeichnisses auf Ihren Webserver.
+**Warum nur Vercel?**
+- Automatische Image Optimization (AVIF/WebP)
+- Edge Network mit globalem Caching
+- Keine Cold Starts
+- Kostenlos bis 1000 Bilder/Tag
 
 ## 📧 Kontakt
 

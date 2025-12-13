@@ -63,13 +63,11 @@ npm run start
 
 ### Checkliste vor Deployment
 - [ ] Build erfolgreich ohne Errors
-- [ ] Alle Seiten im `/out` Ordner vorhanden
-- [ ] Assets sind im `/out` Ordner
 - [ ] Lokaler Test erfolgreich
 
 ### Deployment durchführen
 
-#### Option 1: Vercel
+#### Vercel (einzige unterstützte Plattform)
 ```bash
 npm i -g vercel
 vercel login
@@ -78,19 +76,7 @@ vercel
 - [ ] Vercel-Projekt erstellt
 - [ ] Domain konfiguriert
 - [ ] SSL-Zertifikat aktiv
-
-#### Option 2: Netlify
-1. [ ] Bei Netlify einloggen
-2. [ ] Neues Projekt erstellen
-3. [ ] `/out` Ordner hochladen
-4. [ ] Domain konfigurieren
-5. [ ] SSL-Zertifikat aktivieren
-
-#### Option 3: Eigener Server
-- [ ] `/out` Ordner auf Server kopiert
-- [ ] Webserver konfiguriert (Apache/Nginx)
-- [ ] Domain auf Server zeigt
-- [ ] SSL-Zertifikat installiert (Let's Encrypt)
+- [ ] Image Optimization aktiv (automatisch)
 
 ## Nach dem Deployment
 
@@ -159,8 +145,6 @@ npm run build
 
 ### Support kontaktieren
 - Vercel: https://vercel.com/support
-- Netlify: https://www.netlify.com/support/
-- Eigener Hoster: Support-Kontakt
 
 ## Ressourcen & Links
 
@@ -168,7 +152,6 @@ npm run build
 - Next.js: https://nextjs.org/docs
 - Tailwind CSS: https://tailwindcss.com/docs
 - Vercel: https://vercel.com/docs
-- Netlify: https://docs.netlify.com
 
 ### Tools
 - Google Search Console: https://search.google.com/search-console

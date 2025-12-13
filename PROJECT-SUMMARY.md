@@ -229,42 +229,25 @@ export const metadata = {
 - Statische HTML-Generierung
 - Keine Runtime-Dependencies
 
-## 🌐 Deployment-Optionen
+## 🌐 Deployment
 
-### 1. Vercel (empfohlen)
+### Vercel (einzige unterstützte Plattform)
 ```bash
 npm i -g vercel
 vercel
 ```
+
 **Vorteile:**
 - Zero-Config
 - Automatische SSL
-- CDN
-- Preview-URLs
+- Globales Edge Network (CDN)
+- Preview-URLs für jeden Commit
+- **Automatische Image Optimization (AVIF/WebP)**
+- Keine Cold Starts
+- Kostenlos bis 1000 Bilder/Tag
 
-### 2. Netlify
-Drag & Drop des `/out` Ordners nach Build
-
-**Vorteile:**
-- Einfaches Interface
-- Automatische Deployments
-- Forms-Integration möglich
-
-### 3. GitHub Pages
-Nach Build `/out` in gh-pages Branch
-
-**Vorteile:**
-- Kostenlos
-- Git-Integration
-- Einfach für Open-Source
-
-### 4. Eigener Server
-`/out` Ordner per FTP/SCP hochladen
-
-**Vorteile:**
-- Volle Kontrolle
-- Kein Vendor Lock-in
-- Eigene Domain-Verwaltung
+**Warum nur Vercel?**
+Die Website nutzt Vercel Image Optimization für automatische Bildkonvertierung und -komprimierung. Diese Funktionalität ist nicht auf statischen Hosting-Plattformen verfügbar.
 
 ## 🔐 Rechtliche Anforderungen (Deutschland)
 
